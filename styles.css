@@ -6,9 +6,9 @@
 }
 
 :root {
-    --primary-color: #3AA8A1;
-    --secondary-color: #174C4F;
-    --text-color: #333;
+    --primary-color: #2A8B85;
+    --secondary-color: #0F3A3D;
+    --text-color: #1a1a1a;
     --light-bg: #f8f9fa;
     --white: #ffffff;
     --border-color: #e9ecef;
@@ -208,6 +208,8 @@ body {
     object-fit: cover;
     border-radius: 12px;
     box-shadow: var(--shadow);
+    aspect-ratio: 3/2;
+    max-width: 600px;
 }
 
 /* Services Overview */
@@ -257,7 +259,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     min-height: 280px;
-    /* Force Netlify rebuild */
+    contain: layout style;
 }
 
 .service-card:hover {
