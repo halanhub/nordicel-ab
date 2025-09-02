@@ -245,6 +245,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     min-height: 280px;
+    /* Force Netlify rebuild */
 }
 
 .service-card:hover {
