@@ -217,6 +217,7 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     align-items: stretch;
+    grid-auto-rows: 1fr;
 }
 
 .service-card-link {
@@ -243,6 +244,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    min-height: 280px;
 }
 
 .service-card:hover {
