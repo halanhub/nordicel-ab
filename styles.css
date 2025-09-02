@@ -23,6 +23,14 @@ body {
     background-color: var(--white);
 }
 
+/* Font metric overrides to prevent layout shifts */
+@font-face {
+    font-family: 'Inter';
+    font-display: swap;
+    font-weight: 300 700;
+    src: url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -103,6 +111,7 @@ body {
     margin-top: 70px;
     padding: 80px 0;
     background: linear-gradient(135deg, var(--light-bg) 0%, var(--white) 100%);
+    contain: layout style;
 }
 
 .hero-container {
@@ -210,12 +219,14 @@ body {
     box-shadow: var(--shadow);
     aspect-ratio: 3/2;
     max-width: 600px;
+    will-change: transform;
 }
 
 /* Services Overview */
 .services-overview {
     padding: 80px 0;
     background-color: var(--white);
+    contain: layout style;
 }
 
 .services-overview h2 {
@@ -232,6 +243,7 @@ body {
     gap: 2rem;
     align-items: stretch;
     grid-auto-rows: 1fr;
+    contain: layout;
 }
 
 .service-card-link {
