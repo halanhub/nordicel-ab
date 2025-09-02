@@ -130,6 +130,18 @@ body {
     line-height: 1.6;
 }
 
+.hero-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.hero-link:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
 .hero-buttons {
     display: flex;
     gap: 1rem;
