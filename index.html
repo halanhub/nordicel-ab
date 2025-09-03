@@ -141,6 +141,20 @@
         .btn { display: inline-block; padding: 12px 30px; text-decoration: none; border-radius: 8px; font-weight: 600; transition: all 0.3s ease; border: 2px solid transparent; cursor: pointer; }
         .btn-primary { background-color: var(--primary-color); color: var(--white); }
         .btn-secondary { background-color: transparent; color: var(--primary-color); border-color: var(--primary-color); }
+        
+        /* FOUC Prevention */
+        .page-content, .hero, .services-overview, .why-choose-us, .footer { 
+            opacity: 0; 
+            transition: opacity 0.3s ease;
+        }
+        .css-loaded .page-content, 
+        .css-loaded .hero, 
+        .css-loaded .services-overview, 
+        .css-loaded .why-choose-us, 
+        .css-loaded .footer { 
+            opacity: 1; 
+        }
+        .navbar { opacity: 1 !important; }
     </style>
     <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="styles.css"></noscript>
@@ -159,7 +173,9 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <img src="assets/images/nordicel-logo.png" alt="Nordic EL Logo" class="logo-img">
+                <a href="index.html" style="text-decoration: none;">
+                    <img src="assets/images/nordicel-logo.png" alt="Nordic EL Logo" class="logo-img">
+                </a>
             </div>
             <ul class="nav-menu">
                 <li class="nav-item">
@@ -345,5 +361,18 @@
     </footer>
 
     <script src="script.js" defer></script>
+    <script>
+        // Prevent FOUC by adding CSS loaded class
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add CSS loaded class to body
+            document.body.classList.add('css-loaded');
+            
+            // Ensure navbar is visible immediately
+            const navbar = document.querySelector('.navbar');
+            if (navbar) {
+                navbar.style.opacity = '1';
+            }
+        });
+    </script>
 </body>
 </html>

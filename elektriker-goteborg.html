@@ -62,7 +62,9 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <img src="assets/images/nordicel-logo.png" alt="Nordic EL Logo" class="logo-img">
+                <a href="index.html" style="text-decoration: none;">
+                    <img src="assets/images/nordicel-logo.png" alt="Nordic EL Logo" class="logo-img">
+                </a>
             </div>
             <ul class="nav-menu">
                 <li class="nav-item">
@@ -206,6 +208,14 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Prevent FOUC by adding CSS loaded class
+        document.addEventListener('DOMContentLoaded', function() {
+            document.body.classList.add('css-loaded');
+            const navbar = document.querySelector('.navbar');
+            if (navbar) navbar.style.opacity = '1';
+        });
+    </script>
 </body>
 </html>
 
