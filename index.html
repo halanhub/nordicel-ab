@@ -156,17 +156,13 @@
         }
         .navbar { opacity: 1 !important; }
     </style>
-    <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="styles.css"></noscript>
+    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="assets/images/electric-1080584_1280.jpg" as="image" type="image/jpeg">
     <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
-    <link rel="preload" href="styles.css" as="style">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -362,16 +358,9 @@
 
     <script src="script.js" defer></script>
     <script>
-        // Prevent FOUC by adding CSS loaded class
+        // Ensure content is visible immediately since CSS loads normally
         document.addEventListener('DOMContentLoaded', function() {
-            // Add CSS loaded class to body
             document.body.classList.add('css-loaded');
-            
-            // Ensure navbar is visible immediately
-            const navbar = document.querySelector('.navbar');
-            if (navbar) {
-                navbar.style.opacity = '1';
-            }
         });
     </script>
 </body>
