@@ -63,6 +63,17 @@ body {
     font-size: 1.8rem;
 }
 
+.logo-img {
+    height: 40px;
+    width: auto;
+    max-width: 200px;
+    transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
+}
+
 .nav-menu {
     display: flex;
     list-style: none;
@@ -1205,6 +1216,11 @@ body {
     .checkbox-group {
         grid-template-columns: 1fr;
         gap: 0.5rem;
+    }
+    
+    .logo-img {
+        height: 35px;
+        max-width: 150px;
     }
 }
 
