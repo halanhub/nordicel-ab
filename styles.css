@@ -39,7 +39,7 @@ body {
 
 /* Navigation */
 .navbar {
-    background-color: var(--white);
+    background-color: #ffffff !important;
     box-shadow: var(--shadow);
     position: fixed;
     top: 0;
@@ -55,6 +55,13 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 70px;
+    background-color: #ffffff;
+}
+
+.nav-logo {
+    background-color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 4px;
 }
 
 .nav-logo h2 {
@@ -68,6 +75,7 @@ body {
     width: auto;
     max-width: 200px;
     transition: transform 0.3s ease;
+    background: transparent;
 }
 
 .logo-img:hover {

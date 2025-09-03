@@ -59,8 +59,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.querySelector('form[data-netlify="true"]');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
             // Basic form validation
             const name = this.querySelector('input[name="name"]');
             const email = this.querySelector('input[name="email"]');
@@ -101,10 +99,12 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             if (isValid) {
-                // Show success message
+                // Show success message before Netlify processes
                 showMessage('Tack för ditt meddelande! Vi återkommer så snart som möjligt.', 'success');
-                this.reset();
+                // Let Netlify handle the form submission
+                // The form will submit naturally to Netlify
             } else {
+                e.preventDefault(); // Only prevent default if validation fails
                 showMessage('Vänligen fyll i alla obligatoriska fält korrekt.', 'error');
             }
         });
