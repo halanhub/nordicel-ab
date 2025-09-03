@@ -64,23 +64,17 @@ body {
 }
 
 .logo-img {
-    height: 25px !important;
-    width: auto !important;
-    max-width: 120px !important;
+    height: 30px;
+    width: auto;
+    max-width: 150px;
     transition: transform 0.3s ease;
-    /* Force cache refresh - smaller logo */
 }
 
 .logo-img:hover {
     transform: scale(1.05);
 }
 
-/* Force logo size override */
-.nav-logo .logo-img {
-    height: 25px !important;
-    max-width: 120px !important;
-    width: auto !important;
-}
+
 
 .nav-menu {
     display: flex;
@@ -1227,8 +1221,8 @@ body {
     }
     
     .logo-img {
-        height: 22px !important;
-        max-width: 100px !important;
+        height: 28px;
+        max-width: 120px;
     }
 }
 
