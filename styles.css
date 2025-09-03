@@ -64,9 +64,9 @@ body {
 }
 
 .logo-img {
-    height: 40px;
+    height: 30px;
     width: auto;
-    max-width: 200px;
+    max-width: 150px;
     transition: transform 0.3s ease;
 }
 
@@ -1219,8 +1219,8 @@ body {
     }
     
     .logo-img {
-        height: 35px;
-        max-width: 150px;
+        height: 28px;
+        max-width: 120px;
     }
 }
 
